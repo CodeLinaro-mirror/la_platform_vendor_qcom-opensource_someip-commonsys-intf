@@ -1,0 +1,36 @@
+{
+    "unicast":"127.0.0.1",
+    "logging":
+    {
+        "level":"debug",
+        "console":"true"
+    },
+
+    "applications":
+    [
+        {
+            "name":"bt_hal_service",
+            "id":"0x1357"
+        },
+
+        {
+            "name":"bt_hal_client",
+            "id":"0x2468"
+        }
+    ],
+
+    "services":
+    [
+        {
+            "service":"0x7800",
+            "instance":"0x06A3",
+            "unreliable":"30509"
+        }
+    ],
+
+    "routing":"bt_hal_service",
+    "service-discovery":
+    {
+        "enable":"false"
+    }
+}
