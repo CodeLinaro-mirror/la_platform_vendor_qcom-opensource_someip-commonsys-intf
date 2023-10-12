@@ -1,0 +1,45 @@
+{
+    "unicast" : "127.0.0.1",
+    "netmask" : "255.255.255.0",
+    "logging" :
+    {
+        "level" : "info",
+        "console" : "true",
+        "file" : { "enable" : "true", "path" : "/data/vsomeip_client.log" },
+        "dlt" : "true"
+    },
+    "applications" :
+    [
+        {
+            "name" : "bt_hal_client",
+            "id" : "0x2468"
+        },
+        {
+            "name" : "bt_hal_service",
+            "id" : "0x1357"
+        }
+    ],
+    "services" :
+    [
+        {
+            "service" : "0x7800",
+            "instance" : "0x06A3",
+            "reliable" : { "port" : "30509", "magic-cookies" : false },
+        }
+    ],
+    "routing" : "bt_hal_service",
+    "service-discovery" :
+    {
+        "enable" : "true",
+        "multicast" : "224.0.0.1",
+        "port" : "30491",
+        "protocol" : "udp",
+        "initial_delay_min" : "10",
+        "initial_delay_max" : "100",
+        "repetitions_base_delay" : "200",
+        "repetitions_max" : "3",
+        "ttl" : "3",
+        "cyclic_offer_delay" : "2000",
+        "request_response_delay" : "1500"
+    }
+}
