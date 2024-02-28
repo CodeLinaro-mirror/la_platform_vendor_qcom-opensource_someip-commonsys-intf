@@ -11,9 +11,9 @@ PRODUCT_PACKAGES += \
 # someip lib
 PRODUCT_PACKAGES += \
     libvsomeip3 \
-    libvsomeip_cfg \
-    libvsomeip_e2e \
-    libvsomeip_sd
+    libvsomeip3-cfg \
+    libvsomeip3-e2e \
+    libvsomeip3-sd
 
 # someip config file
 PRODUCT_PACKAGES += \
