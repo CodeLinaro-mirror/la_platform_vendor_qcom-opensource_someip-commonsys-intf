@@ -10,12 +10,8 @@
     "applications" :
     [
         {
-            "name" : "bt_hal_client",
+            "name" : "bluetooth_hci_client",
             "id" : "0x2468"
-        },
-        {
-            "name" : "bt_hal_service",
-            "id" : "0x1357"
         },
         {
             "name": "wifi_hal_client",
@@ -30,7 +26,7 @@
             "id":"0x1301"
         }
     ],
-    "routing" : "bt_hal_client",
+    "routing" : "bluetooth_hci_client",
     "service-discovery" :
     {
         "enable" : "true",
