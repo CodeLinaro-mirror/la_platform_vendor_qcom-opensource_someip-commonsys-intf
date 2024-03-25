@@ -10,24 +10,20 @@
     "applications" :
     [
         {
-            "name" : "bt_hal_client",
-            "id" : "0x2468"
-        },
-        {
             "name" : "bt_hal_service",
             "id" : "0x1357"
         },
         {
-            "name" : "wifi_hal_service",
+            "name" : "wifihal_someip_service",
             "id" : "0x1100"
         },
         {
             "name": "nlinterceptor_service",
-            "id":"0x1200"
+            "id" : "0x1200"
         },
         {
             "name": "supplicant_someip_service",
-            "id":"0x1300"
+            "id" : "0x1300"
         }
     ],
     "services" :
@@ -82,7 +78,11 @@
         {
             "service" : "0x7901",
             "instance" : "0x1110",
-            "unreliable" : "30509",
+            "unreliable" : "30510",
+            "someip-tp" :
+            {
+                "service-to-client" : [ "0x060B", "0x0608", "0x0609" ]
+            },
             "multicast" :
             {
                 "address" : "224.225.226.233",
@@ -135,7 +135,7 @@
         {
             "service" : "0x7902",
             "instance" : "0x2220",
-            "unreliable" : "30509",
+            "unreliable" : "30511",
             "someip-tp" :
             {
                 "service-to-client" : [ "0x8000", "0x8001" ]
@@ -170,7 +170,7 @@
         {
             "service" : "0x7903",
             "instance" : "0x1110",
-            "unreliable" : "30509",
+            "unreliable" : "30512",
             "multicast" :
             {
                 "address" : "224.225.226.233",
@@ -240,7 +240,7 @@
             ]
         }
     ],
-    "routing" : "bt_hal_service",
+    "routing" : "wifihal_someip_service",
     "service-discovery" :
     {
         "enable" : "true",
