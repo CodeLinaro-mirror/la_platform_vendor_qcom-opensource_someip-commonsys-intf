@@ -21,4 +21,12 @@ PRODUCT_PACKAGES += \
     vsomeip_server.json \
     vsomeip_lo.json \
     vsomeip_ipc.json
+
+# rpc util
+ifeq ($(ENABLE_QTI_RPC_UTIL), true)
+ifneq "$(wildcard vendor/qcom/proprietary/commonsys/rpc/util/rpc_util.mk)" ""
+include vendor/qcom/proprietary/commonsys/rpc/util/rpc_util.mk
 endif
+endif
+
+endif # ENABLE_SOMEIP
