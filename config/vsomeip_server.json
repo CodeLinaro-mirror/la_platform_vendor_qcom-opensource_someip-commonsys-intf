@@ -169,7 +169,7 @@
         },
         {
             "service" : "0x7903",
-            "instance" : "0x1110",
+            "instance" : "0x3330",
             "unreliable" : "30512",
             "multicast" :
             {
@@ -190,6 +190,11 @@
                 },
                 {
                     "event" : "0x8202",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8205",
                     "is_field" : "true",
                     "update-cycle" : 0
                 },
@@ -232,8 +237,8 @@
             "eventgroups" :
             [
                 {
-                    "eventgroup" : "0xAAA0",
-                    "events" : [ "0x8001", "0x8201", "0x8202", "0x8206", "0x8212", "0x8214", "0x8215", "0x8221", "0x8223", "0x8303" ],
+                    "eventgroup" : "0xCCC0",
+                    "events" : [ "0x8001", "0x8201", "0x8202", "0x8205", "0x8206", "0x8212", "0x8214", "0x8215", "0x8221", "0x8223", "0x8303" ],
                     "is_multicast" : "true"
                 }
 
