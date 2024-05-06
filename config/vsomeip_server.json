@@ -219,6 +219,11 @@
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x821D",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8221",
                     "is_field" : "true",
                     "update-cycle" : 0
@@ -238,7 +243,7 @@
             [
                 {
                     "eventgroup" : "0xCCC0",
-                    "events" : [ "0x8001", "0x8201", "0x8202", "0x8205", "0x8206", "0x8212", "0x8214", "0x8215", "0x8221", "0x8223", "0x8303" ],
+                    "events" : [ "0x8001", "0x8201", "0x8202", "0x8205", "0x8206", "0x8212", "0x8214", "0x8215", "0x821D", "0x8221", "0x8223", "0x8303" ],
                     "is_multicast" : "true"
                 }
 
