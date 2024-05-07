@@ -10,7 +10,15 @@
     "applications" :
     [
         {
+<<<<<<< HEAD   (1acc91 Merge dd9cb684f44f396231c6743d9935f6aeb6e16a29 on remote bra)
             "name" : "bt_hal_client",
+=======
+            "name" : "routing_manager",
+            "id" : "0x0101"
+        },
+        {
+            "name" : "bluetooth_hci_client",
+>>>>>>> CHANGE (a4cc29 someip config: add routing_manager application)
             "id" : "0x2468"
         },
         {
@@ -30,7 +38,11 @@
             "id":"0x1301"
         }
     ],
+<<<<<<< HEAD   (1acc91 Merge dd9cb684f44f396231c6743d9935f6aeb6e16a29 on remote bra)
     "routing" : "bt_hal_client",
+=======
+    "routing" : "routing_manager",
+>>>>>>> CHANGE (a4cc29 someip config: add routing_manager application)
     "service-discovery" :
     {
         "enable" : "true",
