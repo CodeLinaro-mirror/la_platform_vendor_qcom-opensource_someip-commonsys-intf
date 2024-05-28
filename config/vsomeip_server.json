@@ -10,6 +10,10 @@
     "applications" :
     [
         {
+            "name" : "central_router_service",
+            "id" : "0x0100"
+        },
+        {
             "name" : "bt_hal_service",
             "id" : "0x1357"
         },
@@ -28,6 +32,11 @@
     ],
     "services" :
     [
+        {
+            "service" : "0x7700",
+            "instance" : "0x1000",
+            "unreliable" : "30508"
+        },
         {
             "service" : "0x7800",
             "instance" : "0x06A3",
@@ -250,7 +259,7 @@
             ]
         }
     ],
-    "routing" : "wifihal_someip_service",
+    "routing" : "central_router_service",
     "service-discovery" :
     {
         "enable" : "true",
