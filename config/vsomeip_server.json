@@ -35,12 +35,12 @@
         {
             "service" : "0x7700",
             "instance" : "0x1000",
-            "unreliable" : "30508"
+            "unreliable" : "30400"
         },
         {
             "service" : "0x7800",
             "instance" : "0x06A3",
-            "unreliable" : "30509",
+            "unreliable" : "30500",
             "multicast" :
             {
                 "address" : "224.225.226.233",
@@ -83,6 +83,16 @@
                 }
 
             ]
+        },
+        {
+            "service" : "0x7801",
+            "instance" : "0x06A3",
+            "unreliable" : "30501",
+            "multicast" :
+            {
+                "address" : "224.225.226.233",
+                "port" : "32344"
+            }
         },
         {
             "service" : "0x7901",
