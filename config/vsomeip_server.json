@@ -18,6 +18,10 @@
             "id" : "0x1357"
         },
         {
+            "name" : "handsfree_audio_hal_service",
+            "id" : "0x1358"
+        },
+        {
             "name" : "wifihal_someip_service",
             "id" : "0x1100"
         },
