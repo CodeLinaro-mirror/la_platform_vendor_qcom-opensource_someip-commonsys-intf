@@ -7,6 +7,12 @@
         "file" : { "enable" : "false", "path" : "/tmp/vsomeip.log" },
         "dlt" : "false"
     },
+    "npdu-default-timings" : {
+        "debounce-time-request" : "0",
+        "debounce-time-response" : "0",
+        "max-retention-time-request" : "0",
+        "max-retention-time-response" : "0"
+    },
     "applications" :
     [
         {
