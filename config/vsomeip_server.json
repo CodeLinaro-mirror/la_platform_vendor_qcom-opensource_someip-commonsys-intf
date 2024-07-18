@@ -42,6 +42,10 @@
         {
             "name": "hostapd_someip_service",
             "id" : "0x1400"
+        },
+        {
+            "name": "qtiwifi_someip_service",
+            "id" : "0x1500"
         }
     ],
     "services" :
@@ -480,6 +484,31 @@
                 {
                     "eventgroup" : "0xDDD0",
                     "events" : [ "0x8000", "0x8001", "0x8002" ]
+                }
+            ]
+        },
+        {
+            "service" : "0x7905",
+            "instance" : "0x5550",
+            "unreliable" : "30514",
+            "reliable":
+            {
+                "port":"30524",
+                "enable-magic-cookies":"false"
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xEEE0",
+                    "events" : [ "0x8000" ]
                 }
             ]
         }

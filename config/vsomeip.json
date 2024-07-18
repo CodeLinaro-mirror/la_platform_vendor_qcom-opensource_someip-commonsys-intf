@@ -42,6 +42,10 @@
         {
             "name": "hostapd_someip_client",
             "id":"0x1401"
+        },
+        {
+            "name": "qtiwifi_someip_client",
+            "id":"0x1501"
         }
     ],
     "services" :
@@ -349,6 +353,18 @@
                 },
                 {
                     "event" : "0x8002",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ]
+        },
+        {
+            "service" : "0x7905",
+            "instance" : "0x5550",
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
                     "is_field" : "true",
                     "is_reliable" : "true"
                 }
