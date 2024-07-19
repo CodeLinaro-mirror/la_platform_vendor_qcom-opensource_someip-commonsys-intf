@@ -32,6 +32,10 @@
         {
             "name": "supplicant_someip_client",
             "id":"0x1301"
+        },
+        {
+            "name": "hostapd_someip_client",
+            "id":"0x1401"
         }
     ],
     "routing" : "routing_manager",

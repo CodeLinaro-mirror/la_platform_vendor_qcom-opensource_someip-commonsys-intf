@@ -32,6 +32,10 @@
         {
             "name": "supplicant_someip_service",
             "id" : "0x1300"
+        },
+        {
+            "name": "hostapd_someip_service",
+            "id" : "0x1400"
         }
     ],
     "services" :
@@ -270,6 +274,42 @@
                     "is_multicast" : "true"
                 }
 
+            ]
+        },
+        {
+            "service" : "0x7904",
+            "instance" : "0x4440",
+            "unreliable" : "30513",
+            "multicast" :
+            {
+                "address" : "224.225.226.233",
+                "port" : "32344"
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8001",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8002",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xDDD0",
+                    "events" : [ "0x8000", "0x8001", "0x8002" ],
+                    "is_multicast" : "true"
+                }
             ]
         }
     ],
