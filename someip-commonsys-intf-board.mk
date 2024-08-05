@@ -15,6 +15,7 @@ ifeq ($(ENABLE_QTI_RPC_UTIL), true)
 ENABLE_QTI_A2P := true
 ENABLE_QTI_APCC := true
 ENABLE_QTI_RPC_CLASS_GEN := true
+VENDOR_AIDL_PATH := "vendor/qcom/opensource/interfaces"
 endif
 
 endif
