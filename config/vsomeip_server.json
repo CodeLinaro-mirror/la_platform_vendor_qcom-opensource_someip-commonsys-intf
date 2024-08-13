@@ -7,6 +7,12 @@
         "file" : { "enable" : "false", "path" : "/tmp/vsomeip.log" },
         "dlt" : "false"
     },
+    "npdu-default-timings" : {
+        "debounce-time-request" : "0",
+        "debounce-time-response" : "0",
+        "max-retention-time-request" : "0",
+        "max-retention-time-response" : "0"
+    },
     "applications" :
     [
         {
@@ -206,7 +212,17 @@
             "events" :
             [
                 {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8001",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8200",
                     "is_field" : "true",
                     "update-cycle" : 0
                 },
@@ -221,6 +237,16 @@
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x8203",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8204",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8205",
                     "is_field" : "true",
                     "update-cycle" : 0
@@ -231,7 +257,67 @@
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x8207",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8208",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8209",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820A",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820B",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820C",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820D",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820E",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x820F",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8210",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8211",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8212",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8213",
                     "is_field" : "true",
                     "update-cycle" : 0
                 },
@@ -246,7 +332,57 @@
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x8216",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8217",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8218",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8219",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x821A",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x821B",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x821C",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x821D",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x821E",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x821F",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8220",
                     "is_field" : "true",
                     "update-cycle" : 0
                 },
@@ -256,12 +392,57 @@
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x8222",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8223",
                     "is_field" : "true",
                     "update-cycle" : 0
                 },
                 {
+                    "event" : "0x8300",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8301",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8302",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
                     "event" : "0x8303",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8304",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8305",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8400",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x8401",
+                    "is_field" : "true",
+                    "update-cycle" : 0
+                },
+                {
+                    "event" : "0x9000",
                     "is_field" : "true",
                     "update-cycle" : 0
                 }
@@ -270,7 +451,7 @@
             [
                 {
                     "eventgroup" : "0xCCC0",
-                    "events" : [ "0x8001", "0x8201", "0x8202", "0x8205", "0x8206", "0x8212", "0x8214", "0x8215", "0x821D", "0x8221", "0x8223", "0x8303" ],
+                    "events" : [ "0x8000", "0x8001", "0x8200", "0x8201", "0x8202", "0x8203", "0x8204", "0x8205", "0x8206", "0x8207", "0x8208", "0x8209", "0x820A", "0x820B", "0x820C", "0x820D", "0x820E", "0x820F", "0x8210", "0x8211", "0x8212", "0x8213", "0x8214", "0x8215", "0x8216", "0x8217", "0x8218", "0x8219", "0x821A", "0x821B", "0x821C", "0x821D", "0x821E", "0x821F", "0x8220", "0x8221", "0x8222", "0x8223", "0x8300", "0x8301", "0x8302", "0x8303", "0x8304", "0x8305", "0x8400", "0x8401", "0x9000" ],
                     "is_multicast" : "true"
                 }
 
