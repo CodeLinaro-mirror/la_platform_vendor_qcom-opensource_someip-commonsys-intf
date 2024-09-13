@@ -1,5 +1,5 @@
 {
-    "unicast" : "10.40.2.103",
+    "unicast" : "192.168.1.4",
     "logging" :
     {
         "level" : "debug",
@@ -42,6 +42,10 @@
         {
             "name": "hostapd_someip_service",
             "id" : "0x1400"
+        },
+        {
+            "name": "qtiwifi_someip_service",
+            "id" : "0x1500"
         }
     ],
     "services" :
@@ -49,7 +53,12 @@
         {
             "service" : "0x7700",
             "instance" : "0x1000",
-            "unreliable" : "30400"
+            "unreliable" : "30400",
+            "reliable":
+            {
+                "port":"30410",
+                "enable-magic-cookies":"false"
+            }
         },
         {
             "service" : "0x7800",
@@ -112,46 +121,46 @@
             "service" : "0x7901",
             "instance" : "0x1110",
             "unreliable" : "30510",
+            "reliable":
+            {
+                "port":"30520",
+                "enable-magic-cookies":"false"
+            },
             "someip-tp" :
             {
                 "service-to-client" : [ "0x060B", "0x0608", "0x0609" ]
-            },
-            "multicast" :
-            {
-                "address" : "224.225.226.233",
-                "port" : "32344"
             },
             "events" :
             [
                 {
                     "event" : "0x8103",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8006",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
-                    "event" : "0x8000",
+                    "event" : "0x8400",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
-                    "event" : "0x8001",
+                    "event" : "0x8401",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8402",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8403",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 }
             ],
             "eventgroups" :
@@ -159,8 +168,7 @@
 
                 {
                     "eventgroup" : "0xAAA0",
-                    "events" : [ "0x8103", "0x8006", "0x8400", "0x8401", "0x8402", "0x8403" ],
-                    "is_multicast" : "true"
+                    "events" : [ "0x8103", "0x8006", "0x8400", "0x8401", "0x8402", "0x8403" ]
                 }
 
             ]
@@ -169,34 +177,33 @@
             "service" : "0x7902",
             "instance" : "0x2220",
             "unreliable" : "30511",
+            "reliable":
+            {
+                "port":"30521",
+                "enable-magic-cookies":"false"
+            },
             "someip-tp" :
             {
                 "service-to-client" : [ "0x8000", "0x8001" ]
-            },
-            "multicast" :
-            {
-                "address" : "224.225.226.233",
-                "port" : "32344"
             },
             "events" :
             [
                 {
                     "event" : "0x8000",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8001",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 }
             ],
             "eventgroups" :
             [
                 {
                     "eventgroup" : "0xBBB0",
-                    "events" : [ "0x8000", "0x8001" ],
-                    "is_multicast" : "true"
+                    "events" : [ "0x8000", "0x8001" ]
                 }
             ]
         },
@@ -204,292 +211,304 @@
             "service" : "0x7903",
             "instance" : "0x3330",
             "unreliable" : "30512",
-            "multicast" :
+            "reliable":
             {
-                "address" : "224.225.226.233",
-                "port" : "32344"
+                "port":"30522",
+                "enable-magic-cookies":"false"
             },
             "events" :
             [
                 {
                     "event" : "0x8000",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8001",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8200",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8201",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8202",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8203",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8204",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8205",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8206",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8207",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8208",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8209",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820A",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820B",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820C",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820D",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820E",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x820F",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8210",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8211",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8212",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8213",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8214",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8215",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8216",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8217",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8218",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8219",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821A",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821B",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821C",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821D",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821E",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x821F",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8220",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8221",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8222",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8223",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8300",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8301",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8302",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8303",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8304",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8305",
                     "is_field" : "true",
-                    "update-cycle" : 0
-                },
-                {
-                    "event" : "0x8400",
-                    "is_field" : "true",
-                    "update-cycle" : 0
-                },
-                {
-                    "event" : "0x8401",
-                    "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x9000",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 }
             ],
             "eventgroups" :
             [
                 {
                     "eventgroup" : "0xCCC0",
-                    "events" : [ "0x8000", "0x8001", "0x8200", "0x8201", "0x8202", "0x8203", "0x8204", "0x8205", "0x8206", "0x8207", "0x8208", "0x8209", "0x820A", "0x820B", "0x820C", "0x820D", "0x820E", "0x820F", "0x8210", "0x8211", "0x8212", "0x8213", "0x8214", "0x8215", "0x8216", "0x8217", "0x8218", "0x8219", "0x821A", "0x821B", "0x821C", "0x821D", "0x821E", "0x821F", "0x8220", "0x8221", "0x8222", "0x8223", "0x8300", "0x8301", "0x8302", "0x8303", "0x8304", "0x8305", "0x8400", "0x8401", "0x9000" ],
-                    "is_multicast" : "true"
+                    "events" : [ "0x8000", "0x8001", "0x8200", "0x8201", "0x8202", "0x8203", "0x8204", "0x8205", "0x8206", "0x8207", "0x8208", "0x8209", "0x820A", "0x820B", "0x820C", "0x820D", "0x820E", "0x820F", "0x8210", "0x8211", "0x8212", "0x8213", "0x8214", "0x8215", "0x8216", "0x8217", "0x8218", "0x8219", "0x821A", "0x821B", "0x821C", "0x821D", "0x821E", "0x821F", "0x8220", "0x8221", "0x8222", "0x8223", "0x8300", "0x8301", "0x8302", "0x8303", "0x8304", "0x8305", "0x9000" ]
                 }
-
             ]
         },
         {
             "service" : "0x7904",
             "instance" : "0x4440",
             "unreliable" : "30513",
-            "multicast" :
+            "reliable":
             {
-                "address" : "224.225.226.233",
-                "port" : "32344"
+                "port":"30523",
+                "enable-magic-cookies":"false"
             },
             "events" :
             [
                 {
                     "event" : "0x8000",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8001",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8002",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 }
             ],
             "eventgroups" :
             [
                 {
                     "eventgroup" : "0xDDD0",
-                    "events" : [ "0x8000", "0x8001", "0x8002" ],
-                    "is_multicast" : "true"
+                    "events" : [ "0x8000", "0x8001", "0x8002" ]
+                }
+            ]
+        },
+        {
+            "service" : "0x7905",
+            "instance" : "0x5550",
+            "unreliable" : "30514",
+            "reliable":
+            {
+                "port":"30524",
+                "enable-magic-cookies":"false"
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xEEE0",
+                    "events" : [ "0x8000" ]
                 }
             ]
         }
