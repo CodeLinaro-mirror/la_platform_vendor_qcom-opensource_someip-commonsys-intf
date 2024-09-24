@@ -53,17 +53,17 @@
         {
             "service" : "0x7700",
             "instance" : "0x1000",
-            "unreliable" : "30400",
+            "unreliable" : "30300",
             "reliable":
             {
-                "port":"30410",
+                "port":"30310",
                 "enable-magic-cookies":"false"
             }
         },
         {
             "service" : "0x7800",
             "instance" : "0x06A3",
-            "unreliable" : "30500",
+            "unreliable" : "30400",
             "multicast" :
             {
                 "address" : "224.225.226.233",
@@ -110,7 +110,7 @@
         {
             "service" : "0x7801",
             "instance" : "0x06A3",
-            "unreliable" : "30501",
+            "unreliable" : "30401",
             "multicast" :
             {
                 "address" : "224.225.226.233",
