@@ -32,6 +32,10 @@
             "id":"0x1101"
         },
         {
+            "name": "wifi_cem_hal_client",
+            "id":"0x1102"
+        },
+        {
             "name": "nlinterceptor_client",
             "id":"0x1201"
         },
@@ -44,8 +48,16 @@
             "id":"0x1401"
         },
         {
+            "name": "hostapd_cem_someip_client",
+            "id":"0x1402"
+        },
+        {
             "name": "qtiwifi_someip_client",
             "id":"0x1501"
+        },
+        {
+            "name": "qtiwifi_cem_someip_client",
+            "id":"0x1502"
         }
     ],
     "services" :
@@ -53,6 +65,43 @@
         {
             "service" : "0x7901",
             "instance" : "0x1110",
+            "events" :
+            [
+                {
+                    "event" : "0x8103",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8006",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8400",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8401",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8402",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8403",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ]
+        },
+        {
+            "service" : "0x7901",
+            "instance" : "0x1111",
             "events" :
             [
                 {
@@ -359,8 +408,42 @@
             ]
         },
         {
+            "service" : "0x7904",
+            "instance" : "0x4441",
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8001",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8002",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ]
+        },
+        {
             "service" : "0x7905",
             "instance" : "0x5550",
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ]
+        },
+        {
+            "service" : "0x7905",
+            "instance" : "0x5551",
             "events" :
             [
                 {
