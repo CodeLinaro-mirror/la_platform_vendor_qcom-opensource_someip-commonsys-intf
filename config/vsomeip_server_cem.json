@@ -1,0 +1,169 @@
+{
+    "unicast" : "192.168.1.5",
+    "logging" :
+    {
+        "level" : "debug",
+        "console" : "true",
+        "file" : { "enable" : "false", "path" : "/tmp/vsomeip.log" },
+        "dlt" : "false"
+    },
+    "npdu-default-timings" : {
+        "debounce-time-request" : "0",
+        "debounce-time-response" : "0",
+        "max-retention-time-request" : "0",
+        "max-retention-time-response" : "0"
+    },
+    "applications" :
+    [
+        {
+            "name" : "central_router_service",
+            "id" : "0x0180"
+        },
+        {
+            "name" : "wifihal_someip_service",
+            "id" : "0x1180"
+        },
+        {
+            "name": "hostapd_someip_service",
+            "id" : "0x1480"
+        },
+        {
+            "name": "qtiwifi_someip_service",
+            "id" : "0x1580"
+        }
+    ],
+    "services" :
+    [
+        {
+            "service" : "0x7901",
+            "instance" : "0x1111",
+            "unreliable" : "30510",
+            "reliable":
+            {
+                "port":"30520",
+                "enable-magic-cookies":"false"
+            },
+            "someip-tp" :
+            {
+                "service-to-client" : [ "0x060B", "0x0608", "0x0609" ]
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8103",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8006",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8400",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8401",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8402",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8403",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+
+                {
+                    "eventgroup" : "0xAAA0",
+                    "events" : [ "0x8103", "0x8006", "0x8400", "0x8401", "0x8402", "0x8403" ]
+                }
+
+            ]
+        },
+        {
+            "service" : "0x7904",
+            "instance" : "0x4441",
+            "unreliable" : "30513",
+            "reliable":
+            {
+                "port":"30523",
+                "enable-magic-cookies":"false"
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8001",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8002",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xDDD0",
+                    "events" : [ "0x8000", "0x8001", "0x8002" ]
+                }
+            ]
+        },
+        {
+            "service" : "0x7905",
+            "instance" : "0x5551",
+            "unreliable" : "30514",
+            "reliable":
+            {
+                "port":"30524",
+                "enable-magic-cookies":"false"
+            },
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xEEE0",
+                    "events" : [ "0x8000" ]
+                }
+            ]
+        }
+    ],
+    "routing" : "central_router_service",
+    "service-discovery" :
+    {
+        "enable" : "true",
+        "multicast" : "224.244.224.245",
+        "port" : "30500",
+        "protocol" : "udp",
+        "initial_delay_min" : "10",
+        "initial_delay_max" : "100",
+        "repetitions_base_delay" : "200",
+        "repetitions_max" : "3",
+        "ttl" : "3600",
+        "cyclic_offer_delay" : "2000",
+        "request_response_delay" : "1500"
+    }
+}
