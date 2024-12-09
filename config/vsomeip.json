@@ -63,6 +63,38 @@
     "services" :
     [
         {
+            "service" : "0x7800",
+            "instance" : "0x06A3",
+            "events" :
+            [
+                {
+                    "event" : "0x8000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8001",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8002",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8003",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x8004",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ]
+        },
+        {
             "service" : "0x7901",
             "instance" : "0x1110",
             "events" :
