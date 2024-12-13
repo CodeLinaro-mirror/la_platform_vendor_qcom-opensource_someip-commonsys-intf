@@ -1,5 +1,7 @@
 {
-    "unicast" : "192.168.1.4",
+    "unicast" : "10.40.3.1",
+    "netmask" : "255.255.0.0",
+    "device"  : "vlan40",
     "logging" :
     {
         "level" : "debug",
