@@ -1,5 +1,7 @@
 {
-    "unicast" : "192.168.1.4",
+    "unicast" : "10.40.3.1",
+    "netmask" : "255.255.0.0",
+    "device"  : "vlan40",
     "logging" :
     {
         "level" : "debug",
@@ -53,56 +55,55 @@
         {
             "service" : "0x7700",
             "instance" : "0x1000",
-            "unreliable" : "30400",
+            "unreliable" : "30300",
             "reliable":
             {
-                "port":"30410",
+                "port":"30310",
                 "enable-magic-cookies":"false"
             }
         },
         {
             "service" : "0x7800",
             "instance" : "0x06A3",
-            "unreliable" : "30500",
-            "multicast" :
+            "unreliable" : "30400",
+            "reliable":
             {
-                "address" : "224.225.226.233",
-                "port" : "32344"
+                "port":"30410",
+                "enable-magic-cookies":"false"
             },
             "events" :
             [
                 {
                     "event" : "0x8000",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8001",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8002",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8003",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 },
                 {
                     "event" : "0x8004",
                     "is_field" : "true",
-                    "update-cycle" : 0
+                    "is_reliable" : "true"
                 }
             ],
             "eventgroups" :
             [
                 {
                     "eventgroup" : "0x6666",
-                    "events" : [ "0x8000", "0x8001", "0x8002", "0x8003", "0x8004" ],
-                    "is_multicast" : "true"
+                    "events" : [ "0x8000", "0x8001", "0x8002", "0x8003", "0x8004" ]
                 }
 
             ]
@@ -110,11 +111,11 @@
         {
             "service" : "0x7801",
             "instance" : "0x06A3",
-            "unreliable" : "30501",
-            "multicast" :
+            "unreliable" : "30401",
+            "reliable":
             {
-                "address" : "224.225.226.233",
-                "port" : "32344"
+                "port":"30411",
+                "enable-magic-cookies":"false"
             }
         },
         {
