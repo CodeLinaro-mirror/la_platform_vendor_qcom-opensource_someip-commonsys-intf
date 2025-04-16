@@ -436,6 +436,21 @@
                     "event" : "0x8002",
                     "is_field" : "true",
                     "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x9000",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x9001",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                },
+                {
+                    "event" : "0x9002",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
                 }
             ]
         },
@@ -490,7 +505,7 @@
     "service-discovery" :
     {
         "enable" : "true",
-        "multicast" : "224.244.224.245",
+        "multicast" : "239.195.255.255",
         "port" : "30500",
         "protocol" : "udp",
         "initial_delay_min" : "10",
